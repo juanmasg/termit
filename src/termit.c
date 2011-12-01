@@ -44,7 +44,6 @@ struct TermitTab* termit_get_tab_by_index(guint index)
 static GtkWidget* create_statusbar()
 {
     GtkWidget* statusbar = gtk_statusbar_new();
-//	statusbar.set_has_resize_grip(FALSE);
     return statusbar;
 }
 
@@ -282,6 +281,8 @@ static void termit_init(const gchar* initFile, const gchar* command)
 
     termit.main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     termit.statusbar = create_statusbar();
+	//FIXME: Make this optional
+	gtk_statusbar_set_has_resize_grip((GtkStatusbar*)termit.statusbar, FALSE);
     create_search(&termit);
     termit.notebook = gtk_notebook_new();
     gtk_notebook_set_show_tabs(GTK_NOTEBOOK(termit.notebook), TRUE);
