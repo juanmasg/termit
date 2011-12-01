@@ -44,7 +44,7 @@ struct TermitTab* termit_get_tab_by_index(guint index)
 static GtkWidget* create_statusbar()
 {
     GtkWidget* statusbar = gtk_statusbar_new();
-	statusbar.set_has_resize_grip(FALSE);
+//	statusbar.set_has_resize_grip(FALSE);
     return statusbar;
 }
 
@@ -181,9 +181,6 @@ void termit_create_menubar()
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_new_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_close_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), gtk_separator_menu_item_new());
-    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_copy);
-    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_paste);
-    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(file_menu), mi_exit);
     gtk_menu_item_set_submenu(GTK_MENU_ITEM(mi_file), file_menu);
 
@@ -197,6 +194,9 @@ void termit_create_menubar()
 
     GtkWidget *mi_edit = gtk_menu_item_new_with_label(_("Edit"));
     GtkWidget *edit_menu = gtk_menu_new();
+    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_copy);
+    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_paste);
+    gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_set_tab_name);
     gtk_menu_shell_append(GTK_MENU_SHELL(edit_menu), mi_edit_preferences);
     gtk_menu_item_set_submenu(GTK_MENU_ITEM(mi_edit), edit_menu);
@@ -239,12 +239,12 @@ void termit_create_popup_menu()
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_new_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_close_tab);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
+    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_copy);
+    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_paste);
+    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_set_tab_name);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), termit.mi_show_scrollbar);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_edit_preferences);
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_copy);
-    gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_paste);
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), gtk_separator_menu_item_new());
     gtk_menu_shell_append(GTK_MENU_SHELL(termit.menu), mi_exit);
 
