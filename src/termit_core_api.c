@@ -107,6 +107,10 @@ static void termit_set_fonts()
         gint h = vte_terminal_get_char_height(VTE_TERMINAL(pTab->vte)) * configs.rows + border->top + border->bottom;
         if (h > minHeight)
             minHeight = h;
+
+            // FIXME: Do it optional
+            vte_terminal_set_allow_bold(VTE_TERMINAL(pTab->vte), 0);
+
     }
     gint oldWidth, oldHeight;
     gtk_window_get_size(GTK_WINDOW(termit.main_window), &oldWidth, &oldHeight);
