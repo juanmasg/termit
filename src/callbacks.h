@@ -18,6 +18,7 @@
 gboolean termit_on_delete_event(GtkWidget *widget, GdkEvent *event, gpointer data);
 void termit_on_destroy(GtkWidget *widget, gpointer data);
 gboolean termit_on_popup(GtkWidget *, GdkEvent *);
+gboolean termit_on_popup_key(GtkWidget *);
 gboolean termit_on_key_press(GtkWidget *widget, GdkEventKey *event, gpointer user_data);
 gboolean termit_on_focus(GtkWidget *widget, GtkDirectionType arg1, gpointer user_data);
 void termit_on_beep(VteTerminal *vte, gpointer user_data);

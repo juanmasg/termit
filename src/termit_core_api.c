@@ -424,6 +424,7 @@ void termit_append_tab_with_details(const struct TabInfo* ti)
     g_signal_connect(G_OBJECT(pTab->vte), "child-exited", G_CALLBACK(termit_on_child_exited), NULL);
 //    g_signal_connect(G_OBJECT(pTab->vte), "eof", G_CALLBACK(termit_eof), NULL);
     g_signal_connect_swapped(G_OBJECT(pTab->vte), "button-press-event", G_CALLBACK(termit_on_popup), NULL);
+    g_signal_connect(G_OBJECT(pTab->vte), "popup-menu", G_CALLBACK(termit_on_popup_key), NULL);
     
     vte_terminal_set_encoding(VTE_TERMINAL(pTab->vte), pTab->encoding);
 

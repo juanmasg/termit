@@ -177,6 +177,13 @@ static struct Match* get_match_by_tag(GArray* matches, int tag)
     return NULL;
 }
 
+gboolean termit_on_popup_key(GtkWidget *widget){
+	GtkMenu *menu = GTK_MENU(termit.menu);
+	gtk_menu_popup(menu, NULL, NULL, NULL, NULL, 0,
+					gdk_event_get_time((GdkEvent*)NULL));
+	return TRUE;
+}
+
 gboolean termit_on_popup(GtkWidget *widget, GdkEvent *event)
 {
     if (event->type != GDK_BUTTON_PRESS)
