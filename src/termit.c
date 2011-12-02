@@ -253,7 +253,7 @@ void termit_create_popup_menu()
     for (; j<configs.user_popup_menus->len; ++j) {
         struct UserMenu* um = &g_array_index(configs.user_popup_menus, struct UserMenu, j);
 
-        GtkWidget *mi_util = gtk_menu_item_new_with_label(um->name);
+        GtkWidget *mi_util = gtk_menu_item_new_with_mnemonic(um->name);
         GtkWidget *utils_menu = gtk_menu_new();
         gtk_menu_item_set_submenu(GTK_MENU_ITEM(mi_util), utils_menu);
 
@@ -261,7 +261,7 @@ void termit_create_popup_menu()
         guint i = 0;
         for (; i<um->items->len; i++) {
             struct UserMenuItem* umi = &g_array_index(um->items, struct UserMenuItem, i);
-            GtkWidget *mi_tmp = gtk_menu_item_new_with_label(umi->name);
+            GtkWidget *mi_tmp = gtk_menu_item_new_with_mnemonic(umi->name);
             g_object_set_data(G_OBJECT(mi_tmp), TERMIT_USER_MENU_ITEM_DATA, umi);
             gtk_menu_shell_append(GTK_MENU_SHELL(utils_menu), mi_tmp);
             g_signal_connect(G_OBJECT(mi_tmp), "activate",
