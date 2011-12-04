@@ -13,3 +13,4 @@ termit-*.ebuild
 cmake_install.cmake
 cmake_uninstall.cmake
 src/termit
+src/patches-local
