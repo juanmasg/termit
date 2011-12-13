@@ -110,6 +110,8 @@ static void termit_set_fonts()
 
             // FIXME: Do it optional
             vte_terminal_set_allow_bold(VTE_TERMINAL(pTab->vte), 0);
+            // FIXME: Do it optional. Deprecated
+				vte_terminal_set_cursor_blinks(VTE_TERMINAL(pTab->vte), 0);
 
     }
     gint oldWidth, oldHeight;

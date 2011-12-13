@@ -10,11 +10,11 @@ msgstr "Hintergrund"
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: src/termit_core_api.c:437
+#: src/termit_core_api.c:439
 msgid "Cannot create a new tab"
 msgstr "Konnte keinen neuen Tab erzeugen"
 
-#: src/termit_core_api.c:365
+#: src/termit_core_api.c:366
 msgid "Cannot parse command. Creating tab with shell"
 msgstr ""
 "Konnte Befehl nicht untersuchen. Erstelle einen Tab mit der Kommandozeile"
@@ -41,11 +41,11 @@ msgstr "Vordergrund"
 msgid "Image"
 msgstr "Bild"
 
-#: src/callbacks.c:383
+#: src/callbacks.c:390
 msgid "Open session"
 msgstr "Sitzung ffnen"
 
-#: src/callbacks.c:353
+#: src/callbacks.c:360
 msgid "Save session"
 msgstr "Sitzung speichern"
 
@@ -70,7 +70,7 @@ msgstr ""
 "Mehrere Tabs sind geffnet.\n"
 "Trotzdem schlieen?"
 
-#: src/callbacks.c:262 src/callbacks.c:271
+#: src/callbacks.c:269 src/callbacks.c:278
 msgid "Tab name"
 msgstr "Tab-Name"
 
