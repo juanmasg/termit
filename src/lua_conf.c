@@ -225,6 +225,8 @@ void termit_lua_options_loader(const gchar* name, lua_State* ls, int index, void
         termit_config_get_boolean(&(p_cfg->audible_bell), ls, index);
     else if (!strcmp(name, "visibleBell"))
         termit_config_get_boolean(&(p_cfg->visible_bell), ls, index);
+    else if (!strcmp(name, "blinkCursor"))
+        termit_config_get_boolean(&(p_cfg->blink_cursor), ls, index);
     else if (!strcmp(name, "urgencyOnBell"))
         termit_config_get_boolean(&(p_cfg->urgency_on_bell), ls, index);
     else if (!strcmp(name, "getWindowTitle"))

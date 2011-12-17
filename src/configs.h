@@ -47,6 +47,7 @@ struct Configs
     gboolean allow_changing_title;
     gboolean audible_bell;
     gboolean visible_bell;
+    gboolean blink_cursor;
     int get_window_title_callback;
     int get_tab_title_callback;
     int get_statusbar_callback;

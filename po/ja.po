@@ -13,23 +13,27 @@ msgstr ""
 "X-Poedit-Language: Japanese\n"
 "X-Poedit-Country: JAPAN\n"
 
-#: src/termit_preferences.c:299
+#: src/termit_preferences.c:314
 msgid "Audible bell"
 msgstr "可聴ベル"
 
-#: src/termit_preferences.c:260
+#: src/termit_preferences.c:275
 msgid "Background"
 msgstr "背景"
 
-#: src/termit_preferences.c:276
+#: src/termit_preferences.c:291
 msgid "Background image"
 msgstr "背景画像"
 
-#: src/termit_core_api.c:439
+#: src/termit_preferences.c:330
+msgid "Blinking cursor"
+msgstr ""
+
+#: src/termit_core_api.c:445
 msgid "Cannot create a new tab"
 msgstr "新しいタブを作成できません"
 
-#: src/termit_core_api.c:366
+#: src/termit_core_api.c:372
 msgid "Cannot parse command. Creating tab with shell"
 msgstr "コマンドを解析できません。シェル経由でタブを作成します"
 
@@ -41,17 +45,17 @@ msgstr "編集"
 msgid "File"
 msgstr "ファイル"
 
-#: src/termit_preferences.c:242
+#: src/termit_preferences.c:257
 msgid "Font"
 msgstr "フォント"
 
-#: src/termit_preferences.c:251
+#: src/termit_preferences.c:266
 msgid "Foreground"
 msgstr "前景"
 
 #. g_signal_connect(btn_switch_image_file, "toggled", G_CALLBACK(dlg_switch_image_file), btn_image_file);
 #. TERMIT_PREFERENCE_ROW2(btn_switch_image_file, btn_image_file);
-#: src/termit_preferences.c:283
+#: src/termit_preferences.c:298
 msgid "Image"
 msgstr "画像"
 
@@ -86,11 +90,11 @@ msgstr "終了しますか?"
 msgid "Tab name"
 msgstr "タブ名"
 
-#: src/termit_preferences.c:235
+#: src/termit_preferences.c:250
 msgid "Title"
 msgstr "タイトル"
 
-#: src/termit_preferences.c:291
+#: src/termit_preferences.c:306
 msgid "Transparency"
 msgstr "透過"
 
@@ -99,10 +103,10 @@ msgstr "透過"
 msgid "Unable to create directory '%s': %s"
 msgstr "ディレクトリ '%s' が生成できません: %s"
 
-#: src/termit_preferences.c:307
+#: src/termit_preferences.c:322
 msgid "Visible bell"
 msgstr "可視ベル"
 
-#: src/termit_preferences.c:267
+#: src/termit_preferences.c:282
 msgid "images"
 msgstr "画像"

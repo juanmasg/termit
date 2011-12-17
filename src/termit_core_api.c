@@ -110,8 +110,6 @@ static void termit_set_fonts()
 
             // FIXME: Do it optional
             vte_terminal_set_allow_bold(VTE_TERMINAL(pTab->vte), 0);
-            // FIXME: Do it optional. Deprecated
-				vte_terminal_set_cursor_blinks(VTE_TERMINAL(pTab->vte), 0);
 
     }
     gint oldWidth, oldHeight;
@@ -327,6 +325,13 @@ void termit_tab_set_visible_bell(struct TermitTab* pTab, gboolean visible_bell)
     vte_terminal_set_visible_bell(VTE_TERMINAL(pTab->vte), visible_bell);
 }
 
+void termit_tab_set_blink_cursor(struct TermitTab* pTab, gboolean blink_cursor)
+{
+    pTab->blink_cursor = blink_cursor;
+    //FIXME: Deprecated
+    vte_terminal_set_cursor_blinks(VTE_TERMINAL(pTab->vte), blink_cursor);
+}
+
 void termit_append_tab_with_details(const struct TabInfo* ti)
 {
     struct TermitTab* pTab = g_malloc0(sizeof(struct TermitTab));
@@ -450,6 +455,7 @@ void termit_append_tab_with_details(const struct TabInfo* ti)
 
     termit_tab_set_audible_bell(pTab, configs.audible_bell);
     termit_tab_set_visible_bell(pTab, configs.visible_bell);
+    termit_tab_set_blink_cursor(pTab, configs.blink_cursor);
 
     pTab->scrollbar = gtk_vscrollbar_new(vte_terminal_get_adjustment(VTE_TERMINAL(pTab->vte)));
 

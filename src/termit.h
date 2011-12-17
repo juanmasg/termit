@@ -56,6 +56,7 @@ struct TermitTab
     gboolean custom_tab_name;
     gboolean audible_bell;
     gboolean visible_bell;
+    gboolean blink_cursor;
     VteTerminalEraseBinding bksp_binding;
     VteTerminalEraseBinding delete_binding;
     gchar *encoding;

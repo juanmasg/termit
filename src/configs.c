@@ -68,6 +68,7 @@ void termit_config_trace()
     TRACE("     allow_changing_title    = %d", configs.allow_changing_title);
     TRACE("     audible_bell            = %d", configs.audible_bell);
     TRACE("     visible_bell            = %d", configs.visible_bell);
+    TRACE("     blink_cursor            = %d", configs.blink_cursor);
     TRACE("     get_window_title_callback= %d", configs.get_window_title_callback);
     TRACE("     get_tab_title_callback  = %d", configs.get_tab_title_callback);
     TRACE("     get_statusbar_callback  = %d", configs.get_statusbar_callback);
@@ -116,6 +117,7 @@ void termit_configs_set_defaults()
     configs.allow_changing_title = FALSE;
     configs.visible_bell = FALSE;
     configs.audible_bell = FALSE;
+    configs.blink_cursor = FALSE;
     configs.urgency_on_bell = FALSE;
     configs.get_window_title_callback = 0;
     configs.get_tab_title_callback = 0;
